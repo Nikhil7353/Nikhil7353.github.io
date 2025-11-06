@@ -1,0 +1,129 @@
+body {
+  font-family: 'Poppins', sans-serif;
+  scroll-behavior: smooth;
+}
+
+html {
+  scroll-padding-top: 60px; /* adjust based on your navbar height */
+}
+
+/* Navbar */
+.navbar {
+  background-color: #222 !important;
+}
+
+.navbar-brand, .nav-link {
+  color: white !important;
+  font-weight: 500;
+}
+
+.nav-link:hover {
+  color: #f1c40f !important;
+}
+
+/* Hero Section */
+#home {
+  height: 100vh;
+  background-color: #f4f4f4;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  padding: 40px;
+}
+
+#home img {
+  width: 180px;
+  height: 180px;
+  border-radius: 50%;
+  border: 4px solid #f1c40f;
+  margin-bottom: 20px;
+  object-fit: cover;
+}
+
+#home h1 {
+  font-size: 2.5rem;
+  margin-bottom: 10px;
+}
+
+#home p {
+  font-size: 1.2rem;
+  color: #555;
+}
+
+/* Custom Button */
+.btn-custom {
+  background-color: #ffc107;
+  color: #000;
+  font-weight: 600;
+  border: none;
+  padding: 10px 25px;
+  border-radius: 25px;
+  transition: 0.3s;
+}
+
+.btn-custom:hover {
+  background-color: #e0a800;
+  color: #fff;
+  transform: scale(1.05);
+}
+
+/* Projects */
+.project-card img {
+  border-radius: 5px;
+}
+
+/* Contact */
+#contact form input,
+#contact form textarea {
+  border-radius: 8px;
+  border: 1px solid #ccc;
+}
+
+/* Footer */
+footer {
+  background-color: #222;
+  color: white;
+  padding: 30px 0;
+  text-align: center;
+}
+
+footer a {
+  color: white;
+  margin: 0 10px;
+  font-size: 1.5rem;
+  transition: 0.3s;
+}
+
+footer a:hover {
+  color: #f1c40f;
+}
+
+/* About Section */
+.about-section {
+  background: linear-gradient(135deg, #fff8e1, #ffffff);
+  min-height: 100vh; /* Makes it look like a standalone page */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  opacity: 0;
+  transform: translateY(50px);
+  transition: all 0.8s ease-in-out;
+}
+
+.about-section.show {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.about-section h2 {
+  font-size: 2rem;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+.about-section p {
+  color: #333;
+  line-height: 1.8;
+}
