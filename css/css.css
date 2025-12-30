@@ -127,3 +127,87 @@ footer a:hover {
   color: #333;
   line-height: 1.8;
 }
+
+/* Skills Section */
+#skills {
+  background-color: #f8f9fa;
+}
+
+.skill-item {
+  transition: transform 0.3s ease;
+  border-radius: 10px;
+}
+
+.skill-item:hover {
+  transform: translateY(-5px);
+  background-color: #fff;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+}
+
+.skill-item h5 {
+  margin-top: 10px;
+  font-weight: 600;
+}
+
+/* Project Cards Enhancement */
+.project-card {
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  height: 100%;
+}
+
+.project-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15) !important;
+}
+
+.project-card img {
+  height: 200px;
+  object-fit: cover;
+}
+
+/* Form Improvements */
+#formMessage {
+  margin-bottom: 1rem;
+}
+
+#contactForm label {
+  font-weight: 500;
+  color: #333;
+  margin-bottom: 0.5rem;
+}
+
+/* Responsive Improvements */
+@media (max-width: 768px) {
+  #home h1 {
+    font-size: 2rem;
+  }
+
+  #home p {
+    font-size: 1rem;
+  }
+
+  .about-section h2 {
+    font-size: 1.5rem;
+  }
+
+  .skill-item {
+    margin-bottom: 1rem;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  * {
+    scroll-behavior: auto !important;
+  }
+
+  .about-section {
+    transition: none;
+    transform: none;
+    opacity: 1;
+  }
+
+  .skill-item,
+  .project-card {
+    transition: none;
+  }
+}

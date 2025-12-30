@@ -4,7 +4,32 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta name="description" content="Portfolio of Nikhil Chavhan — Java Full Stack Developer skilled in Spring Boot, PostgreSQL, and modern web technologies.">
-  <title>Nikhil Chavhan | Portfolio</title>
+  <meta name="keywords" content="Nikhil Chavhan, Java Developer, Full Stack Developer, Spring Boot, PostgreSQL, Web Developer, Portfolio">
+  <meta name="author" content="Nikhil Chavhan">
+  
+  <!-- Open Graph / Facebook -->
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://nikhil7353.github.io/">
+  <meta property="og:title" content="Nikhil Chavhan | Java Full Stack Developer">
+  <meta property="og:description" content="Portfolio of Nikhil Chavhan — Java Full Stack Developer skilled in Spring Boot, PostgreSQL, and modern web technologies.">
+  <meta property="og:image" content="https://nikhil7353.github.io/images/profile.jpg">
+
+  <!-- Twitter -->
+  <meta property="twitter:card" content="summary_large_image">
+  <meta property="twitter:url" content="https://nikhil7353.github.io/">
+  <meta property="twitter:title" content="Nikhil Chavhan | Java Full Stack Developer">
+  <meta property="twitter:description" content="Portfolio of Nikhil Chavhan — Java Full Stack Developer skilled in Spring Boot, PostgreSQL, and modern web technologies.">
+  <meta property="twitter:image" content="https://nikhil7353.github.io/images/profile.jpg">
+
+  <title>Nikhil Chavhan | Java Full Stack Developer Portfolio</title>
+  
+  <!-- Favicon -->
+  <link rel="icon" type="image/x-icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>👨‍💻</text></svg>">
+
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
 
   <!-- Bootstrap CSS -->
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
@@ -23,13 +48,14 @@
   <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
     <div class="container">
       <a class="navbar-brand" href="#home">My Portfolio</a>
-      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
       </button>
       <div class="collapse navbar-collapse" id="navbarNav">
         <ul class="navbar-nav ms-auto">
           <li class="nav-item"><a class="nav-link" href="#home">Home</a></li>
           <li class="nav-item"><a class="nav-link" href="#about">About</a></li>
+          <li class="nav-item"><a class="nav-link" href="#skills">Skills</a></li>
           <li class="nav-item"><a class="nav-link" href="#projects">Projects</a></li>
           <li class="nav-item"><a class="nav-link" href="#contact">Contact</a></li>
         </ul>
@@ -39,13 +65,13 @@
 
   <!-- Home Section -->
   <section id="home">
-    <img src="images/profile.jpg" alt="Profile">
+    <img src="images/profile.jpg" alt="Portrait of Nikhil Chavhan" width="180" height="180" decoding="async" fetchpriority="high">
     <h1>Hi, I'm <span class="text-warning">Nikhil Chavhan</span></h1>
     <p>Java Full Stack Developer | Spring Boot | PostgreSQL | Web UI</p>
     <div class="mt-3">
       <a href="#projects" class="btn btn-custom m-2">View Projects</a>
-      <a href="Nikhil_Chavhan.pdf" target="_blank" class="btn btn-custom m-2">View Resume</a>
-      <a href="https://github.com/Nikhil7353/" target="_blank" class="btn btn-custom m-2">GitHub</a>
+      <a href="Nikhil_Chavhan.pdf" target="_blank" rel="noopener noreferrer" class="btn btn-custom m-2">View Resume</a>
+      <a href="https://github.com/Nikhil7353/" target="_blank" rel="noopener noreferrer" class="btn btn-custom m-2">GitHub</a>
     </div>
   </section>
 
@@ -56,17 +82,68 @@
         
         <!-- Left Side: Profile Image -->
         <div class="col-md-5 text-center mb-4 mb-md-0">
-          <img src="images/profile.jpg" alt="Nikhil Chavhan" class="rounded-circle shadow-lg img-fluid" style="max-width: 250px;">
+          <img src="images/profile.jpg" alt="Nikhil Chavhan" class="rounded-circle shadow-lg img-fluid" style="max-width: 250px;" width="250" height="250" loading="lazy" decoding="async">
         </div>
         
         <!-- Right Side: About Content -->
         <div class="col-md-7 text-center text-md-start">
           <h2 class="fw-bold mb-3 text-warning">About Me</h2>
           <p class="lead fw-semibold">
-            I’m a passionate <strong>Full Stack Developer</strong> skilled in Java, Spring Boot, Hibernate, PostgreSQL, HTML, CSS, JavaScript, and Bootstrap.
+            I'm a passionate <strong>Full Stack Developer</strong> skilled in Java, Spring Boot, Hibernate, PostgreSQL, HTML, CSS, JavaScript, and Bootstrap.
             I love building efficient, scalable web applications and exploring new technologies to deliver impactful solutions.
           </p>
           <a href="#projects" class="btn btn-custom mt-3 fw-bold">View My Projects</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Skills Section -->
+  <section id="skills" class="py-5">
+    <div class="container">
+      <h2 class="text-center fw-bold mb-5">Skills & Technologies</h2>
+      <div class="row g-4">
+        <div class="col-md-4 col-sm-6 text-center">
+          <div class="skill-item p-4">
+            <i class="fab fa-java fa-3x text-warning mb-3"></i>
+            <h5>Java</h5>
+            <p class="text-muted">Core Java, OOP, Collections</p>
+          </div>
+        </div>
+        <div class="col-md-4 col-sm-6 text-center">
+          <div class="skill-item p-4">
+            <i class="fas fa-code fa-3x text-warning mb-3"></i>
+            <h5>Spring Boot</h5>
+            <p class="text-muted">REST APIs, Microservices</p>
+          </div>
+        </div>
+        <div class="col-md-4 col-sm-6 text-center">
+          <div class="skill-item p-4">
+            <i class="fas fa-database fa-3x text-warning mb-3"></i>
+            <h5>PostgreSQL</h5>
+            <p class="text-muted">Database Design, Queries</p>
+          </div>
+        </div>
+        <div class="col-md-4 col-sm-6 text-center">
+          <div class="skill-item p-4">
+            <i class="fab fa-html5 fa-3x text-warning mb-3"></i>
+            <h5>HTML/CSS</h5>
+            <p class="text-muted">Responsive Design, Bootstrap</p>
+          </div>
+        </div>
+        <div class="col-md-4 col-sm-6 text-center">
+          <div class="skill-item p-4">
+            <i class="fab fa-js-square fa-3x text-warning mb-3"></i>
+            <h5>JavaScript</h5>
+            <p class="text-muted">ES6+, DOM Manipulation</p>
+          </div>
+        </div>
+        <div class="col-md-4 col-sm-6 text-center">
+          <div class="skill-item p-4">
+            <i class="fab fa-react fa-3x text-warning mb-3"></i>
+            <h5>React</h5>
+            <p class="text-muted">Frontend Development</p>
+          </div>
         </div>
       </div>
     </div>
@@ -81,13 +158,18 @@
         <!-- Spice Detection -->
         <div class="col-md-4">
           <div class="card project-card shadow-sm">
-            <img src="images/project1.jpg" class="card-img-top" alt="Spice Detection">
+            <img src="images/project1.jpg" class="card-img-top" alt="Spice Detection project screenshot" loading="lazy" decoding="async">
             <div class="card-body">
               <h5 class="card-title">Spice Detection</h5>
               <p class="card-text">
                 A Machine Learning model built using Python and Image Processing to detect Indian spices based on visual features.
               </p>
-              <a href="https://github.com/Nikhil7353/Spice_Classification" class="btn btn-custom btn-sm" target="_blank">GitHub</a>
+              <div class="mb-2">
+                <span class="badge bg-secondary me-1">Python</span>
+                <span class="badge bg-secondary me-1">Machine Learning</span>
+                <span class="badge bg-secondary">Image Processing</span>
+              </div>
+              <a href="https://github.com/Nikhil7353/Spice_Classification" class="btn btn-custom btn-sm" target="_blank" rel="noopener noreferrer">GitHub</a>
             </div>
           </div>
         </div>
@@ -95,13 +177,19 @@
         <!-- Student Management System -->
         <div class="col-md-4">
           <div class="card project-card shadow-sm">
-            <img src="images/project2.jpg" class="card-img-top" alt="Student Management System">
+            <img src="images/project2.jpg" class="card-img-top" alt="Student Management System project screenshot" loading="lazy" decoding="async">
             <div class="card-body">
               <h5 class="card-title">Student Management System</h5>
               <p class="card-text">
                 A Java Full Stack web app using Spring Boot, PostgreSQL, and HTML/CSS to manage student data efficiently.
               </p>
-              <a href="https://github.com/Nikhil7353/student-management-system" class="btn btn-custom btn-sm" target="_blank">GitHub</a>
+              <div class="mb-2">
+                <span class="badge bg-secondary me-1">Java</span>
+                <span class="badge bg-secondary me-1">Spring Boot</span>
+                <span class="badge bg-secondary me-1">PostgreSQL</span>
+                <span class="badge bg-secondary">HTML/CSS</span>
+              </div>
+              <a href="https://github.com/Nikhil7353/student-management-system" class="btn btn-custom btn-sm" target="_blank" rel="noopener noreferrer">GitHub</a>
             </div>
           </div>
         </div>
@@ -109,13 +197,18 @@
         <!-- Bus Ticket Reservation -->
         <div class="col-md-4">
           <div class="card project-card shadow-sm">
-            <img src="images/project3.jpg" class="card-img-top" alt="Bus Ticket Reservation System">
+            <img src="images/project3.jpg" class="card-img-top" alt="Bus Ticket Reservation System project screenshot" loading="lazy" decoding="async">
             <div class="card-body">
               <h5 class="card-title">Bus Ticket Reservation System</h5>
               <p class="card-text">
                 A backend-based application for booking and managing bus tickets, developed using Spring Boot, React, and MySQL.
               </p>
-              <a href="https://github.com/Nikhil7353/Bus-Ticket-Reservation-System" class="btn btn-custom btn-sm" target="_blank">GitHub</a>
+              <div class="mb-2">
+                <span class="badge bg-secondary me-1">Spring Boot</span>
+                <span class="badge bg-secondary me-1">React</span>
+                <span class="badge bg-secondary">MySQL</span>
+              </div>
+              <a href="https://github.com/Nikhil7353/Bus-Ticket-Reservation-System" class="btn btn-custom btn-sm" target="_blank" rel="noopener noreferrer">GitHub</a>
             </div>
           </div>
         </div>
@@ -131,17 +224,24 @@
       <hr class="w-25 mx-auto text-warning">
     </div>
 
-    <form action="https://formspree.io/f/xnnoenal" method="POST" class="mx-auto" style="max-width: 600px;">
+    <form action="https://formspree.io/f/xnnoenal" method="POST" class="mx-auto" style="max-width: 600px;" id="contactForm">
+      <div id="formMessage" class="alert d-none" role="alert"></div>
       <div class="mb-3">
-        <input type="text" name="name" class="form-control" placeholder="Your Name" required>
+        <label for="name" class="form-label">Your Name</label>
+        <input type="text" name="name" id="name" class="form-control" placeholder="Your Name" required>
       </div>
       <div class="mb-3">
-        <input type="email" name="email" class="form-control" placeholder="Your Email" required>
+        <label for="email" class="form-label">Your Email</label>
+        <input type="email" name="email" id="email" class="form-control" placeholder="Your Email" required>
       </div>
       <div class="mb-3">
-        <textarea name="message" class="form-control" rows="4" placeholder="Your Message" required></textarea>
+        <label for="message" class="form-label">Your Message</label>
+        <textarea name="message" id="message" class="form-control" rows="4" placeholder="Your Message" required></textarea>
       </div>
-      <button type="submit" class="btn btn-custom">Send Message</button>
+      <button type="submit" class="btn btn-custom" id="submitBtn">
+        <span class="submit-text">Send Message</span>
+        <span class="spinner-border spinner-border-sm d-none" role="status" aria-hidden="true"></span>
+      </button>
     </form>
   </section>
 
@@ -150,10 +250,10 @@
     <div class="container">
       <p class="mb-3">Connect with me</p>
       <div>
-        <a href="https://linkedin.com/" target="_blank"><i class="fab fa-linkedin"></i></a>
-        <a href="https://github.com/" target="_blank"><i class="fab fa-github"></i></a>
-        <a href="mailto:nikhilchavan063@gmail.com"><i class="fas fa-envelope"></i></a>
-        <a href="https://twitter.com/" target="_blank"><i class="fab fa-twitter"></i></a>
+        <a href="https://www.linkedin.com/in/nikhil-chavhan" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn Profile"><i class="fab fa-linkedin" aria-hidden="true"></i></a>
+        <a href="https://github.com/Nikhil7353" target="_blank" rel="noopener noreferrer" aria-label="GitHub Profile"><i class="fab fa-github" aria-hidden="true"></i></a>
+        <a href="mailto:nikhilchavan063@gmail.com" aria-label="Send Email"><i class="fas fa-envelope" aria-hidden="true"></i></a>
+        <a href="https://twitter.com/nikhilchavhan" target="_blank" rel="noopener noreferrer" aria-label="Twitter Profile"><i class="fab fa-twitter" aria-hidden="true"></i></a>
       </div>
       <p class="mt-3 mb-0">&copy; 2025 Nikhil Chavhan | All Rights Reserved</p>
     </div>
