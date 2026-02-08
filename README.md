@@ -1,6 +1,6 @@
 # Portfolio Website - Nikhil Chavhan
 
-Personal Portfolio Website built using HTML, CSS, and JavaScript to showcase projects, skills, and achievements.
+Personal Portfolio Website built using React, Vite, and modern web technologies to showcase projects, skills, and achievements with enhanced animations and interactions.
 
 ## 🚀 Live Site
 https://nikhil7353.github.io/
@@ -8,33 +8,59 @@ https://nikhil7353.github.io/
 ## 📁 Project Structure
 ```
 Portfolio-Nikhil Chavhan/
-├── index.html          # Main HTML file
-├── css/
-│   └── css.css        # Custom styles
-├── js/
-│   └── script.js      # JavaScript functionality
+├── index.html          # React build output
+├── assets/            # Optimized CSS and JS bundles
+│   ├── index-*.css    # Minified styles
+│   └── index-*.js     # Minified JavaScript
 ├── images/
 │   ├── profile.jpg
 │   ├── project1.jpg
 │   ├── project2.jpg
 │   └── project3.jpg
-└── Nikhil_Chavhan.pdf # Resume
+├── Nikhil_Chavhan.pdf # Resume
+├── portfolio-react/   # React source code
+│   ├── src/
+│   │   ├── components/
+│   │   ├── data/
+│   │   └── index.css
+│   ├── package.json
+│   └── vite.config.js
+└── README.md          # Documentation
 ```
 
 ## 🛠️ Technologies Used
-- HTML5
-- CSS3
-- JavaScript (ES6+)
-- Bootstrap 5.3.2
-- Font Awesome 6.4.2
-- Formspree (Contact Form)
+
+### Frontend Framework
+- **React 19.2.0** - Component-based UI framework
+- **Vite 7.2.4** - Build tool and dev server
+- **React Bootstrap 2.10.10** - UI component library
+
+### Styling & Design
+- **Tailwind CSS** - Utility-first CSS framework
+- **Framer Motion** - Animation library
+- **Glassmorphism** - Modern design system
+- **Custom CSS** - Advanced animations and effects
+
+### Icons & Media
+- **React Icons** - Icon library (FontAwesome, Simple Icons)
+- **React Type Animation** - Dynamic text animations
+- **Lazy Loading** - Optimized image loading
+
+### Development Tools
+- **ESLint** - Code quality and linting
+- **PostCSS** - CSS processing
+- **Autoprefixer** - CSS compatibility
 
 ## 📝 Features
-- Responsive Design
-- Smooth Scroll Animations
-- Contact Form Integration
-- SEO Optimized
-- Accessible (WCAG compliant)
+- **🎨 Modern Design** - Glassmorphism with gradient effects
+- **⚡ Advanced Animations** - Framer Motion powered interactions
+- **📱 Fully Responsive** - Mobile-first responsive design
+- **🔍 SEO Optimized** - Meta tags, Open Graph, Twitter Cards
+- **♿ Accessible** - WCAG compliant with ARIA labels
+- **🎯 Skill Filtering** - Interactive category-based skill showcase
+- **📊 Project Cards** - Enhanced with hover effects and dual buttons
+- **📧 Contact Form** - Functional contact integration
+- **🚀 Performance** - Lazy loading, code splitting, optimized bundles
 
 ## 🔧 GitHub Pages Setup
 
@@ -61,13 +87,13 @@ If you're getting a 404 error, follow these steps:
 Make sure all files are committed and pushed:
 ```bash
 git add .
-git commit -m "Initial portfolio setup"
+git commit -m "Deploy React portfolio with enhanced features"
 git push origin main
 ```
 
 ### Step 5: Wait for Deployment
 - GitHub Pages can take 1-10 minutes to deploy
-- Check the Actions tab for deployment status
+- Check Actions tab for deployment status
 - You'll see a green checkmark when it's ready
 
 ### Step 6: Clear Browser Cache
@@ -92,10 +118,40 @@ git push origin main
 - **Cause**: Incorrect file paths
 - **Fix**: Verify paths in `index.html` match your folder structure
 
+### Animations Not Working
+- **Cause**: JavaScript loading issues
+- **Fix**: Check browser console for errors, ensure all assets load properly
+
+## 🔄 Development
+
+### Local Development
+```bash
+cd portfolio-react
+npm install
+npm run dev
+```
+
+### Production Build
+```bash
+cd portfolio-react
+npm run build
+```
+
+### Deployment
+```bash
+# Build and copy to root
+npm run build
+# Copy dist/* to repository root
+# Commit and push changes
+git add .
+git commit -m "Deploy React portfolio"
+git push origin main
+```
+
 ## 📧 Contact
 - Email: nikhilchavan063@gmail.com
 - GitHub: [@Nikhil7353](https://github.com/Nikhil7353)
 
 ## 📄 License
-All rights reserved © 2025 Nikhil Chavhan
+All rights reserved 2025 Nikhil Chavhan
 
