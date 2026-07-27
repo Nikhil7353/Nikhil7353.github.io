@@ -1,6 +1,9 @@
 import React, { useState } from 'react';
-import { Container, Row, Col, Form, Button, Alert, Spinner } from 'react-bootstrap';
+import { Alert, Button, Col, Container, Form, Row, Spinner } from 'react-bootstrap';
 import { motion } from 'framer-motion';
+import { FaEnvelope, FaGithub, FaLinkedin } from 'react-icons/fa';
+
+const MotionDiv = motion.div;
 
 const Contact = () => {
     const [status, setStatus] = useState('');
@@ -11,11 +14,11 @@ const Contact = () => {
         setStatus('sending');
 
         try {
-            const formspreeEndpoint = import.meta.env.VITE_FORMSPREE_ENDPOINT || "https://formspree.io/f/xnnoenal";
+            const formspreeEndpoint = import.meta.env.VITE_FORMSPREE_ENDPOINT || 'https://formspree.io/f/xnnoenal';
             const response = await fetch(formspreeEndpoint, {
-                method: "POST",
+                method: 'POST',
                 body: new FormData(form),
-                headers: { Accept: "application/json" }
+                headers: { Accept: 'application/json' }
             });
 
             if (response.ok) {
@@ -24,64 +27,82 @@ const Contact = () => {
             } else {
                 setStatus('error');
             }
-        } catch (error) {
+        } catch {
             setStatus('error');
         }
     };
 
     return (
-        <section id="contact" className="py-5">
+        <section id="contact" className="contact-section">
             <Container>
-                <motion.div
-                    initial={{ opacity: 0, y: 30 }}
-                    whileInView={{ opacity: 1, y: 0 }}
-                    transition={{ duration: 0.6 }}
-                >
-                    <div className="text-center mb-5">
-                        <h2 className="fw-bold text-gradient">Get In Touch</h2>
-                        <p className="text-secondary">Have a project in mind? Let's work together.</p>
-                    </div>
-
-                    <Row className="justify-content-center">
-                        <Col md={8} lg={6}>
-                            <div className="p-5 glass-card">
-                                <Form onSubmit={handleSubmit}>
-                                    {status === 'success' && <Alert variant="success" className="bg-success text-white border-0">✅ Message sent successfully!</Alert>}
-                                    {status === 'error' && <Alert variant="danger" className="bg-danger text-white border-0">❌ Something went wrong. Please try again.</Alert>}
-
-                                    <Form.Group className="mb-4">
-                                        <Form.Label className="text-white small fw-bold text-uppercase ls-1" style={{ letterSpacing: '1px' }}>Your Name</Form.Label>
-                                        <Form.Control type="text" name="name" placeholder="John Doe" required className="bg-transparent text-white border-secondary shadow-none" style={{ borderColor: 'rgba(255,255,255,0.1)', padding: '12px' }} />
-                                    </Form.Group>
-                                    <Form.Group className="mb-4">
-                                        <Form.Label className="text-white small fw-bold text-uppercase ls-1" style={{ letterSpacing: '1px' }}>Your Email</Form.Label>
-                                        <Form.Control type="email" name="email" placeholder="john@example.com" required className="bg-transparent text-white border-secondary shadow-none" style={{ borderColor: 'rgba(255,255,255,0.1)', padding: '12px' }} />
-                                    </Form.Group>
-                                    <Form.Group className="mb-4">
-                                        <Form.Label className="text-white small fw-bold text-uppercase ls-1" style={{ letterSpacing: '1px' }}>Your Message</Form.Label>
-                                        <Form.Control as="textarea" rows={5} name="message" placeholder="Hello..." required className="bg-transparent text-white border-secondary shadow-none" style={{ borderColor: 'rgba(255,255,255,0.1)', padding: '12px' }} />
-                                    </Form.Group>
-
-                                    <Button type="submit" className="btn-custom w-100 py-3 mt-2" disabled={status === 'sending'}>
-                                        {status === 'sending' ? <Spinner animation="border" size="sm" /> : 'Send Message'}
-                                    </Button>
-                                </Form>
+                <Row className="align-items-center g-5">
+                    <Col lg={5}>
+                        <MotionDiv
+                            initial={{ opacity: 0, y: 24 }}
+                            whileInView={{ opacity: 1, y: 0 }}
+                            viewport={{ once: true }}
+                            transition={{ duration: 0.45 }}
+                        >
+                            <p className="eyebrow mb-3">Contact</p>
+                            <h2 className="section-title contact-title mb-4">Have a build, role, or collaboration in mind?</h2>
+                            <p className="section-copy mx-0 mb-4">
+                                Send a quick message and I will get back to you. I am especially interested in full-stack,
+                                dashboard, productivity, and AI-assisted web projects.
+                            </p>
+                            <div className="d-flex gap-3">
+                                <a href="mailto:nikhilchavan063@gmail.com" className="social-icon" style={{ background: 'var(--ink)' }} aria-label="Email Nikhil">
+                                    <FaEnvelope />
+                                </a>
+                                <a href="https://github.com/Nikhil7353" target="_blank" rel="noreferrer" className="social-icon" style={{ background: 'var(--ink)' }} aria-label="Nikhil on GitHub">
+                                    <FaGithub />
+                                </a>
+                                <a href="https://www.linkedin.com/in/nikhil-chavhan" target="_blank" rel="noreferrer" className="social-icon" style={{ background: 'var(--ink)' }} aria-label="Nikhil on LinkedIn">
+                                    <FaLinkedin />
+                                </a>
                             </div>
-                        </Col>
-                    </Row>
-                </motion.div>
+                        </MotionDiv>
+                    </Col>
+                    <Col lg={7}>
+                        <MotionDiv
+                            initial={{ opacity: 0, y: 24 }}
+                            whileInView={{ opacity: 1, y: 0 }}
+                            viewport={{ once: true }}
+                            transition={{ duration: 0.45, delay: 0.08 }}
+                            className="form-shell"
+                        >
+                            <Form onSubmit={handleSubmit}>
+                                {status === 'success' && <Alert variant="success">Message sent successfully.</Alert>}
+                                {status === 'error' && <Alert variant="danger">Something went wrong. Please try again.</Alert>}
+
+                                <Row className="g-3">
+                                    <Col md={6}>
+                                        <Form.Group>
+                                            <Form.Label className="fw-bold small">Name</Form.Label>
+                                            <Form.Control type="text" name="name" placeholder="Your name" required />
+                                        </Form.Group>
+                                    </Col>
+                                    <Col md={6}>
+                                        <Form.Group>
+                                            <Form.Label className="fw-bold small">Email</Form.Label>
+                                            <Form.Control type="email" name="email" placeholder="you@example.com" required />
+                                        </Form.Group>
+                                    </Col>
+                                    <Col xs={12}>
+                                        <Form.Group>
+                                            <Form.Label className="fw-bold small">Message</Form.Label>
+                                            <Form.Control as="textarea" rows={5} name="message" placeholder="Tell me what you are building..." required />
+                                        </Form.Group>
+                                    </Col>
+                                </Row>
+
+                                <Button type="submit" className="btn-custom mt-4 w-100" disabled={status === 'sending'}>
+                                    {status === 'sending' ? <Spinner animation="border" size="sm" /> : 'Send Message'}
+                                </Button>
+                            </Form>
+                        </MotionDiv>
+                    </Col>
+                </Row>
             </Container>
-            <style>{`
-                .form-control:focus {
-                    background-color: rgba(255,255,255,0.05);
-                    border-color: var(--primary-color) !important;
-                    box-shadow: 0 0 0 0.25rem rgba(99, 102, 241, 0.25);
-                    color: white;
-                }
-                .form-control::placeholder {
-                    color: rgba(255,255,255,0.3);
-                }
-            `}</style>
         </section>
     );
 };

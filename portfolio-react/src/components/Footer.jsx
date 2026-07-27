@@ -1,39 +1,39 @@
 import React from 'react';
 import { Container } from 'react-bootstrap';
-import { FaLinkedin, FaGithub, FaTwitter, FaEnvelope } from 'react-icons/fa';
+import { FaEnvelope, FaGithub, FaLinkedin, FaTwitter } from 'react-icons/fa';
 
 const Footer = () => {
     return (
-        <footer className="footer py-5 text-center" style={{ background: 'rgba(15, 23, 42, 0.95)', borderTop: '1px solid rgba(255,255,255,0.05)' }}>
+        <footer className="footer py-5">
             <Container>
-                <h4 className="text-white mb-4 fw-bold">Let's Connect</h4>
-                <div className="d-flex justify-content-center gap-4 mb-4">
-                    <a href="https://www.linkedin.com/in/nikhil-chavhan" target="_blank" rel="noreferrer" className="social-icon">
-                        <FaLinkedin />
-                    </a>
-                    <a href="https://github.com/Nikhil7353" target="_blank" rel="noreferrer" className="social-icon">
-                        <FaGithub />
-                    </a>
-                    <a href="mailto:nikhilchavan063@gmail.com" className="social-icon">
-                        <FaEnvelope />
-                    </a>
-                    <a href="https://twitter.com/nikhilchavhan" target="_blank" rel="noreferrer" className="social-icon">
-                        <FaTwitter />
-                    </a>
+                <div className="d-flex flex-column flex-md-row align-items-center justify-content-between gap-4">
+                    <div>
+                        <h2 className="h4 fw-bold mb-2">Nikhil Chavhan</h2>
+                        <p className="mb-0" style={{ color: 'rgba(255, 250, 240, 0.62)' }}>
+                            Full stack developer building practical, user-focused web products.
+                        </p>
+                    </div>
+                    <div className="d-flex gap-3">
+                        <a href="https://www.linkedin.com/in/nikhil-chavhan" target="_blank" rel="noreferrer" className="social-icon" aria-label="LinkedIn">
+                            <FaLinkedin />
+                        </a>
+                        <a href="https://github.com/Nikhil7353" target="_blank" rel="noreferrer" className="social-icon" aria-label="GitHub">
+                            <FaGithub />
+                        </a>
+                        <a href="mailto:nikhilchavan063@gmail.com" className="social-icon" aria-label="Email">
+                            <FaEnvelope />
+                        </a>
+                        <a href="https://twitter.com/nikhilchavhan" target="_blank" rel="noreferrer" className="social-icon" aria-label="Twitter">
+                            <FaTwitter />
+                        </a>
+                    </div>
                 </div>
-                <p className="mb-0 small text-white-50">&copy; 2025 Nikhil Chavhan | Built with React & Vite</p>
+                <div className="pt-4 mt-4 border-top" style={{ borderColor: 'rgba(255, 250, 240, 0.12)' }}>
+                    <p className="small mb-0" style={{ color: 'rgba(255, 250, 240, 0.5)' }}>
+                        (c) 2026 Nikhil Chavhan. Built with React and Vite.
+                    </p>
+                </div>
             </Container>
-            <style jsx>{`
-                .social-icon {
-                    color: rgba(255,255,255,0.7);
-                    font-size: 1.8rem;
-                    transition: all 0.3s ease;
-                }
-                .social-icon:hover {
-                    color: #38bdf8;
-                    transform: translateY(-5px);
-                }
-            `}</style>
         </footer>
     );
 };

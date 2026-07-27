@@ -1,5 +1,5 @@
 import { FaJava, FaCode, FaDatabase, FaHtml5, FaJsSquare, FaReact, FaCss3Alt, FaPython, FaBrain } from 'react-icons/fa';
-import { SiDjango, SiFastapi, SiRedux, SiMysql, SiHibernate } from 'react-icons/si';
+import { SiDjango, SiFastapi, SiRedux, SiMysql, SiHibernate, SiNodedotjs } from 'react-icons/si';
 
 export const skills = [
   {
@@ -99,5 +99,12 @@ export const skills = [
     description: "OpenCV, Scikit-Learn, AI",
     icon: "FaBrain",
     category: "ai-ml"
+  },
+  {
+    id: 15,
+    name: "Node.js",
+    description: "APIs, Express, Server-side JS",
+    icon: "SiNodedotjs",
+    category: "backend"
   }
 ];

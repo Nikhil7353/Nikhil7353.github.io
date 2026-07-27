@@ -1,50 +1,127 @@
 import React from 'react';
-import { Container, Row, Col, Button } from 'react-bootstrap';
+import { Col, Container, Row } from 'react-bootstrap';
 import { motion } from 'framer-motion';
+
+const MotionDiv = motion.div;
+
+const capabilities = [
+    {
+        title: 'Frontend systems',
+        copy: 'Responsive React interfaces with clear hierarchy, reusable components, and polished interaction states.'
+    },
+    {
+        title: 'Backend architecture',
+        copy: 'REST APIs, authentication flows, database schemas, and server-side features using Java and Python stacks.'
+    }
+];
 
 const About = () => {
     return (
-        <section id="about" className="py-5">
+        <section id="about" className="about-section">
             <Container>
-                <motion.div
-                    initial={{ opacity: 0, y: 50 }}
-                    whileInView={{ opacity: 1, y: 0 }}
-                    transition={{ duration: 0.8 }}
-                    viewport={{ once: true }}
-                >
-                    <div className="glass-card p-5">
-                        <Row className="align-items-center">
-                            <Col md={5} className="text-center mb-4 mb-md-0">
-                                <div className="position-relative d-inline-block">
-                                    <div className="position-absolute w-100 h-100 rounded-circle" style={{ background: 'var(--primary-color)', filter: 'blur(20px)', opacity: 0.5, zIndex: 0 }}></div>
-                                    <img
-                                        src="/images/profile.jpg"
-                                        alt="About Nikhil"
-                                        className="img-fluid rounded-circle shadow-lg position-relative"
-                                        style={{ maxWidth: '280px', border: '5px solid rgba(255,255,255,0.1)', zIndex: 1 }}
-                                    />
+                <Row className="align-items-start g-5">
+                    {/* Left Column: Interactive Code Terminal */}
+                    <Col lg={6}>
+                        <MotionDiv
+                            initial={{ opacity: 0, y: 24, scale: 0.98 }}
+                            whileInView={{ opacity: 1, y: 0, scale: 1 }}
+                            viewport={{ once: true }}
+                            transition={{ duration: 0.6 }}
+                            className="terminal-mockup"
+                        >
+                            <div className="terminal-header">
+                                <div className="dots">
+                                    <span className="dot dot-red"></span>
+                                    <span className="dot dot-yellow"></span>
+                                    <span className="dot dot-green"></span>
                                 </div>
-                            </Col>
-                            <Col md={7}>
-                                <h2 className="fw-bold mb-3 text-gradient">About Me</h2>
-                                <h4 className="fw-light mb-4 text-light">Passionate <span className="text-accent">Full Stack Developer</span></h4>
-                                <p className="lead text-secondary-custom" style={{ color: '#94a3b8' }}>
-                                    I specialize in building robust, scalable web applications using <strong className="text-white">Java, Spring Boot</strong>, <strong className="text-white">Python, Django</strong>, and modern frontend technologies like <strong className="text-white">React</strong>.
-                                </p>
-                                <p style={{ color: '#94a3b8' }}>
-                                    With expertise in <strong className="text-white">Machine Learning</strong> (OpenCV, Scikit-Learn) and <strong className="text-white">database architecture</strong> (PostgreSQL, MySQL), I build comprehensive solutions from AI-powered applications to enterprise systems. I'm passionate about creating innovative projects that bridge cutting-edge technology with practical user needs.
-                                </p>
-                                <div className="mt-4">
-                                    <Button href="#projects" className="btn-custom me-3">My Work</Button>
-                                    <Button href="#contact" className="btn-outline-custom">Let's Talk</Button>
-                                </div>
-                            </Col>
-                        </Row>
-                    </div>
-                </motion.div>
+                                <span className="tab">nikhil.jsx</span>
+                                <div style={{ width: '46px' }}></div>
+                            </div>
+                            <pre className="code-body">
+                                <code>
+                                    <span className="comment">// 1. The Full Stack Developer Blueprint</span>{"\n"}
+                                    <span className="keyword">const</span> <span className="property">developer</span> = <span className="bracket">{"{"}</span>{"\n"}
+                                    {"  "}name: <span className="string">'Nikhil Chavhan'</span>,{"\n"}
+                                    {"  "}role: <span className="string">'Full Stack Developer'</span>,{"\n"}
+                                    {"  "}philosophy: <span className="string">'Shippable product thinking'</span>,{"\n"}
+                                    {"  "}{"\n"}
+                                    {"  "}stack: <span className="bracket">{"{"}</span>{"\n"}
+                                    {"    "}frontend: <span className="bracket">[</span><span className="string">'React'</span>, <span className="string">'Redux'</span>, <span className="string">'Tailwind'</span><span className="bracket">]</span>,{"\n"}
+                                    {"    "}backend: <span className="bracket">[</span><span className="string">'Java / Spring'</span>, <span className="string">'Python / Django'</span><span class="bracket">]</span>,{"\n"}
+                                    {"    "}persistence: <span className="bracket">[</span><span className="string">'PostgreSQL'</span>, <span className="string">'MySQL'</span>, <span className="string">'Hibernate'</span><span class="bracket">]</span>{"\n"}
+                                    {"  "}<span className="bracket">{"}"}</span>,{"\n"}
+                                    {"\n"}
+                                    {"  "}buildSystem: <span className="keyword">function</span>() <span className="bracket">{"{"}</span>{"\n"}
+                                    {"    "}<span className="keyword">return</span> <span className="string">'Resilient APIs + Thoughtful UIs'</span>;{"\n"}
+                                    {"  "}<span className="bracket">{"}"}</span>{"\n"}
+                                    <span className="bracket">{"}"}</span>;
+                                </code>
+                            </pre>
+                        </MotionDiv>
+
+                        {/* Stats Strip */}
+                        <MotionDiv
+                            initial={{ opacity: 0, y: 16 }}
+                            whileInView={{ opacity: 1, y: 0 }}
+                            viewport={{ once: true }}
+                            transition={{ duration: 0.5, delay: 0.25 }}
+                            className="about-stats-strip"
+                        >
+                            <div className="about-stat">
+                                <strong>4+</strong>
+                                <span>Projects</span>
+                            </div>
+                            <div className="about-stat">
+                                <strong>10+</strong>
+                                <span>Tools</span>
+                            </div>
+                            <div className="about-stat">
+                                <strong>1</strong>
+                                <span>Case Study</span>
+                            </div>
+                        </MotionDiv>
+                    </Col>
+
+                    {/* Right Column: Narrative Copy & Stacked Capabilities */}
+                    <Col lg={6}>
+                        <MotionDiv
+                            initial={{ opacity: 0, y: 24 }}
+                            whileInView={{ opacity: 1, y: 0 }}
+                            viewport={{ once: true }}
+                            transition={{ duration: 0.55, delay: 0.1 }}
+                        >
+                            <p className="eyebrow mb-3">About</p>
+                            <h2 className="section-title mb-4" style={{ lineHeight: 1.15 }}>
+                                I turn technical ideas into clear, shippable web experiences.
+                            </h2>
+                            <p className="text-muted mb-4" style={{ lineHeight: 1.68 }}>
+                                I focus on full-stack projects where the interface, API, and data model need to work together.
+                                My portfolio includes collaboration tools, AI-assisted classification, and management dashboards.
+                            </p>
+
+                            <div className="capabilities-stack d-flex flex-column gap-3">
+                                {capabilities.map((item, index) => (
+                                    <div className="capability-card d-flex gap-4 align-items-start p-4" key={item.title}>
+                                        <span className="fs-5 fw-bold" style={{ color: 'var(--brand)', minWidth: '24px' }}>
+                                            0{index + 1}
+                                        </span>
+                                        <div>
+                                            <h3 className="h6 fw-bold mb-1">{item.title}</h3>
+                                            <p className="small text-muted mb-0" style={{ lineHeight: 1.55 }}>
+                                                {item.copy}
+                                            </p>
+                                        </div>
+                                    </div>
+                                ))}
+                            </div>
+                        </MotionDiv>
+                    </Col>
+                </Row>
             </Container>
         </section>
     );
 };
 
 export default About;
+
